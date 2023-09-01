@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/movies")
-class MovieController {
+public class MovieController {
 
     @Autowired
     MovieService movieService;
