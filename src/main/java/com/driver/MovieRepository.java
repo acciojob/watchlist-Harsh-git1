@@ -16,7 +16,7 @@ public class MovieRepository {
 
 
     public void addMovie(Movie movie) {
-        movies.put(movie.getTitle(), movie);
+        movies.put(movie.getName(), movie);
     }
 
 
