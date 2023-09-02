@@ -39,36 +39,20 @@ public class MovieService {
         return movieRepository.getMovies().get(movieName);
     }
 
-    public List<Movie> getMoviesByDirectorName(String directorName) {
+    public List<String> getMoviesByDirectorName(String directorName) {
 
-        Map<String, List<String>> moviesMap = movieRepository.getDirectorMovieMap();
-        Map<String, Movie> movies = movieRepository.getMovies();
-
-        List<Movie> movies1 = new ArrayList<>();
-        List<String> movieList = moviesMap.get(directorName);
-
-        for(String movie : movieList) {
-            movies1.add(movies.get(movie));
-        }
-
-        return movies1;
+        return movieRepository.getMoviesByDirectorName(directorName);
     }
 
-    public List<Movie> findAllMovies() {
-        Map<String, Movie> movies = movieRepository.getMovies();
-        List<Movie> movies1 = new ArrayList<>();
-
-        movies1.addAll(movies.values());
-        return movies1;
+    public List<String> findAllMovies() {
+        return movieRepository.findAllMovies();
     }
 
     public void deleteDirectorByName(String directorName) {
-
         movieRepository.deleteDirectorByName(directorName);
     }
 
     public void deleteAllDirector() {
-
         movieRepository.deleteAllDirector();
     }
 
