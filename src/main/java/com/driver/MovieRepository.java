@@ -88,4 +88,15 @@ public class MovieRepository {
         movies1.addAll(movies.keySet());
         return movies1;
     }
+
+    public Map<Director, List<Movie>> getDirectorMovieMap() {
+        return directorMovieMap;
+    }
+
+    public void setDirectorMovieMap(Map<Director, List<Movie>> directorMovieMap) {
+        this.directorMovieMap = directorMovieMap;
+    }
+
+
+
 }
